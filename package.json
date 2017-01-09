@@ -12,13 +12,13 @@
   "scripts": {
     "test": "eslint index.js && mocha"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3",
     "eslint": "^3.12.2",
+    "eslint-config-brunch": "brunch/eslint-config-brunch",
     "mocha": "^3",
-    "eslint-config-brunch": "brunch/eslint-config-brunch"
+    "svgo": "^0.7.1"
   },
   "eslintConfig": {
     "extends": "brunch"

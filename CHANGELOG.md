@@ -1,2 +1,2 @@
-# {{NAME}}-brunch 1.0.0 (Jan 1, 2016)
+# svgo-brunch 1.0.0 (Jan 14, 2016)
 * Initial release
