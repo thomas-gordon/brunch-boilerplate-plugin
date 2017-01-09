@@ -1,13 +1,13 @@
 {
-  "name": "name-brunch",
+  "name": "svgo-brunch",
   "version": "1.0.0",
-  "description": "Adds {{DESCRIPTION}} support to brunch.",
-  "author": "Paul Miller (http://paulmillr.com/)",
-  "homepage": "https://github.com/brunch/{{NAME}}-brunch",
+  "description": "Adds svgo support to brunch.",
+  "author": "Tom Gordon (http://tomgordon.me/)",
+  "homepage": "https://github.com/brunch/svgo-brunch",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:brunch/{{NAME}}-brunch.git"
+    "url": "git@github.com:brunch/thomas-gordon/svgo-brunch.git"
   },
   "scripts": {
     "test": "eslint index.js && mocha"
