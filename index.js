@@ -4,20 +4,21 @@ const SVGO = require('svgo');
 
 class SVGOBrunch {
   constructor(config) {
-    this.options = config && config.plugins && config.plugins.svgo || {};
+    this.options = Object.assign({}, config.plugins && config.plugins.svgo || {});
   }
-  compile(file) {
-    const svgo = new SVGO();
-    // No transformation for now
+  compileStatic({data}) {
+    const svgo = new SVGO(this.options);
     return new Promise(resolve => {
-      svgo.optimize(file.data, result => {
-        file.data = result.data;
-        resolve(file);
+      svgo.optimize(data, result => {
+        data = result.data;
+        resolve(data);
       });
     });
   }
 }
 
 SVGOBrunch.prototype.brunchPlugin = true;
-SVGOBrunch.prototype.extension = 'svg';
+SVGOBrunch.prototype.staticTargetExtension = 'svg';
+SVGOBrunch.prototype.staticExtension = 'svg';
+
 module.exports = SVGOBrunch;

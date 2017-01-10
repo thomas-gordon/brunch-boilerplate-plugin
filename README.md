@@ -1,8 +1,11 @@
 ## SVGO-brunch
-Adds SVGO support to
-[brunch](http://brunch.io).
+Adds [SVGO](https://github.com/svg/svgo) static asset support to [brunch](http://brunch.io).
+
+All SVGs stored inside the 'assets' folder will be optimized according to 
+the plugins/options you pass through the brunch-config file.
 
 ## Usage
+
 Install the plugin via npm with `npm install --save-dev svgo-brunch`.
 
 Or, do manual install:
@@ -10,6 +13,21 @@ Or, do manual install:
 * Add `"svgo-brunch": "~x.y.z"` to `package.json` of your brunch app.
 * If you want to use git version of plugin, use the GitHub URI
 `"svgo-brunch": "thomas-gordon/svgo-brunch"`.
+
+##Options
+
+You can pass any SVGO option to brunch-config, for example:
+        
+        module.exports = {
+            plugins: {
+                svgo: {
+                    plugins: [
+                        {'removeTitle': true}
+                    ]
+                }
+            }
+        }
+
 
 ## License
 
