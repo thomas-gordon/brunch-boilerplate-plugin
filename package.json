@@ -1,25 +1,30 @@
 {
   "name": "svgo-brunch",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Adds svgo support to brunch.",
   "author": "Tom Gordon (http://tomgordon.me/)",
-  "homepage": "https://github.com/brunch/svgo-brunch",
+  "homepage": "https://github.com/thomas-gordon/svgo-brunch",
   "main": "index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:brunch/thomas-gordon/svgo-brunch.git"
   },
-  "scripts": {
-    "test": "eslint index.js && mocha"
+  "keywords": [
+    "brunch",
+    "brunch-plugin",
+    "brunch-compiler",
+    "js",
+    "svgo",
+    "optimize"
+  ],
+  "dependencies": {
+    "svgo": "^0.7.1"
   },
-  "dependencies": {},
   "devDependencies": {
-    "chai": "^3",
     "eslint": "^3.12.2",
     "eslint-config-brunch": "brunch/eslint-config-brunch",
     "mocha": "^3",
-    "svgo": "^0.7.1"
   },
   "eslintConfig": {
     "extends": "brunch"
