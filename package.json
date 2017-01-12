@@ -1,6 +1,6 @@
 {
   "name": "svgo-brunch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Adds svgo support to brunch.",
   "author": "Tom Gordon (http://tomgordon.me/)",
   "homepage": "https://github.com/thomas-gordon/svgo-brunch",
