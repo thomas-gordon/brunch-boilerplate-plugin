@@ -7,17 +7,25 @@ class SVGOBrunch {
         this.options = Object.assign({}, config.plugins && config.plugins.svgo || {});
     }
 
-    compileStatic({path, data}) {
-        let optimized,error;
+    compileStatic({path,data,dependencies}) {
+
+        let optimized, error, result;
+
         const svgo = new SVGO(this.options);
+
         try {
-            optimized = svgo.optimize(data);
+            return new Promise(resolve => {
+              svgo.optimize(data, result => {
+                data = result.data;
+                resolve(data);
+              });
+            })
         } catch (e) {
             error = 'SVG minification failed on ' + path + ': ' + e;
         } finally {
-            if (error) return Promise.reject(error);
-            const result = optimized.data;
-            return Promise.resolve(result)
+            if (error) {
+                return Promise.reject(error);
+            }
         }
 
     }
