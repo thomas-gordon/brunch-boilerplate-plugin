@@ -22,10 +22,10 @@ class SVGOBrunch {
             })
         } catch (e) {
             error = 'SVG minification failed on ' + path + ': ' + e;
-        } finally {
-            if (error) {
-                return Promise.reject(error);
-            }
+        }
+
+        if (error) {
+            return Promise.reject(error);
         }
 
     }
